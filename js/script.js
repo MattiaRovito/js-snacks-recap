@@ -10,22 +10,42 @@
 
 //* input
 
-const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let a = parseInt(prompt('Inserisci un numero minimo 1 e un numero massimo ' + array.length));
-let b = parseInt(prompt('Inserisci un numero massimo ' + array.length));
+const array = [28, 15, 123, 23, 4, 59, 26, 77, 81, 38];
+
+const a = parseInt(prompt('Inserisci un numero minimo 1 e un numero massimo ' + array.length));
+const b = parseInt(prompt('Inserisci un numero massimo ' + array.length));
 
 
 //* filter
 
-const newArray = array.filter((element) => {
+// const newArray = array.filter((element, index) => {
 
-    if (element >= a && element <= b){
-        return true;
-    }
-    return false;
+//     if(index >= a && index <= b){
+//         return element;
+//     }
+// });
+
+//* output
+// console.log(newArray);
+
+
+
+
+
+//* forEach
+
+
+const newArray = [];
+
+
+array.forEach((element, index) => {
+
+    if(index >= a && index <= b){
+        newArray.push(element);
+    };
 });
+
 
 
 //* output
 console.log(newArray);
-
